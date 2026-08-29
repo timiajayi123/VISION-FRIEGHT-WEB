@@ -22,7 +22,7 @@ export const company = {
   shortName: "Vision Freight",
   phones: ["08099520084", "08099000147"],
   whatsapp: "2348099520084",
-  email: "info@visionfreight.com.ng", // Placeholder: replace with the confirmed company email.
+  email: "vfsn2021@gmail.com",
   address:
     "1 Satellite Car Park, Opposite Fivestar Car Park, First Gate, Lagos.",
   siteUrl: "https://visionfreight.com.ng",

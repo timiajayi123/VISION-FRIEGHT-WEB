@@ -21,7 +21,7 @@ npm run build
 
 ## Company information
 
-Update contact details, the WhatsApp number and message, the placeholder email, office address, map links, website URL and services in `data/company.ts`.
+Update contact details, the WhatsApp number and message, email, office address, map links, website URL and services in `data/company.ts`.
 
 The enquiry form is frontend-only in this first version. Connect the marked handler in `components/contact-form.tsx` to Resend, Formspree, Web3Forms or a custom endpoint when the preferred submission service is selected.
 
