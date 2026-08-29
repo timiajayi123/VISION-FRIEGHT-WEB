@@ -3,12 +3,17 @@ import { CheckCircle2, Eye, Handshake, Lightbulb, MessageSquareText, ShieldCheck
 import { PageHero } from "@/components/page-hero";
 import { SectionHeading } from "@/components/section-heading";
 import { CTASection } from "@/components/cta-section";
+import { sharedOpenGraph, socialPreviewImage } from "@/data/company";
+
+const pageTitle = "About Vision Freight";
+const pageDescription = "Our company, purpose, values and commitment to customers.";
 
 export const metadata: Metadata = {
   title: "About Us",
   description: "Learn about Vision Freight and Services Nigeria Limited, our mission, vision, values and commitment to dependable logistics support.",
   alternates: { canonical: "/about" },
-  openGraph: { title: "About Vision Freight", description: "Our company, purpose, values and commitment to customers.", url: "/about" },
+  openGraph: { ...sharedOpenGraph, title: pageTitle, description: pageDescription, url: "/about" },
+  twitter: { card: "summary", title: pageTitle, description: pageDescription, images: [socialPreviewImage.url] },
 };
 
 const values = [

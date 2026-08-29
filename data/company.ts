@@ -39,6 +39,21 @@ export const company = {
 
 export const whatsappUrl = `https://wa.me/${company.whatsapp}?text=${encodeURIComponent(company.whatsappMessage)}`;
 
+export const socialPreviewImage = {
+  url: "/images/vision-freight-logo.jpg",
+  width: 883,
+  height: 747,
+  alt: "Vision Freight and Services Nigeria Limited logo",
+  type: "image/jpeg",
+};
+
+export const sharedOpenGraph = {
+  type: "website" as const,
+  locale: "en_NG",
+  siteName: company.name,
+  images: [socialPreviewImage],
+};
+
 export const services: Service[] = [
   {
     slug: "customs-clearance",

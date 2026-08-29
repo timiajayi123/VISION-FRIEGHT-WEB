@@ -3,13 +3,17 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { PageHero } from "@/components/page-hero";
 import { CTASection } from "@/components/cta-section";
-import { services } from "@/data/company";
+import { services, sharedOpenGraph, socialPreviewImage } from "@/data/company";
+
+const pageTitle = "Vision Freight Services";
+const pageDescription = "Practical support for cargo, trade, mobility and commercial requirements.";
 
 export const metadata: Metadata = {
   title: "Our Services",
   description: "Explore customs clearance, freight forwarding, import and export, shipping, vehicle leasing, logistics and general services from Vision Freight.",
   alternates: { canonical: "/services" },
-  openGraph: { title: "Freight, Clearance, Leasing & Logistics Services", description: "Practical support for cargo, trade, mobility and commercial requirements.", url: "/services" },
+  openGraph: { ...sharedOpenGraph, title: pageTitle, description: pageDescription, url: "/services" },
+  twitter: { card: "summary", title: pageTitle, description: pageDescription, images: [socialPreviewImage.url] },
 };
 
 const serviceBenefits: Record<string, string[]> = {

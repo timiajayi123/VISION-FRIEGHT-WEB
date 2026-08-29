@@ -3,13 +3,17 @@ import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { PageHero } from "@/components/page-hero";
 import { ContactForm } from "@/components/contact-form";
 import { LocationMap } from "@/components/location-map";
-import { company, whatsappUrl } from "@/data/company";
+import { company, sharedOpenGraph, socialPreviewImage, whatsappUrl } from "@/data/company";
+
+const pageTitle = "Contact Vision Freight";
+const pageDescription = "Request a quote or speak with our team about your logistics requirements.";
 
 export const metadata: Metadata = {
   title: "Contact Us",
   description: "Contact Vision Freight for customs clearance, freight forwarding, shipping, logistics, vehicle leasing and general service enquiries in Lagos, Nigeria.",
   alternates: { canonical: "/contact" },
-  openGraph: { title: "Contact Vision Freight", description: "Request a quote or speak with our team about your logistics requirements.", url: "/contact" },
+  openGraph: { ...sharedOpenGraph, title: pageTitle, description: pageDescription, url: "/contact" },
+  twitter: { card: "summary", title: pageTitle, description: pageDescription, images: [socialPreviewImage.url] },
 };
 
 export default function ContactPage() {
