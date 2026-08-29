@@ -27,4 +27,4 @@ The enquiry form is frontend-only in this first version. Connect the marked hand
 
 The project can be imported directly into Vercel as a standard Next.js application.
 
-Production domain: `https://visionfreight.com.ng`
+Primary production domain: `https://www.visionfreight.com.ng`

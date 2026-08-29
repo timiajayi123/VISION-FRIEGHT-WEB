@@ -25,7 +25,7 @@ export const company = {
   email: "vfsn2021@gmail.com",
   address:
     "1 Satellite Car Park, Opposite Fivestar Car Park, First Gate, Lagos.",
-  siteUrl: "https://visionfreight.com.ng",
+  siteUrl: "https://www.visionfreight.com.ng",
   mapsUrl:
     "https://www.google.com/maps/search/?api=1&query=1+Satellite+Car+Park+Opposite+Fivestar+Car+Park+First+Gate+Lagos",
   mapEmbedUrl:
@@ -40,7 +40,7 @@ export const company = {
 export const whatsappUrl = `https://wa.me/${company.whatsapp}?text=${encodeURIComponent(company.whatsappMessage)}`;
 
 export const socialPreviewImage = {
-  url: "/images/vision-freight-logo.jpg",
+  url: "/images/vision-freight-social-logo.jpg",
   width: 883,
   height: 747,
   alt: "Vision Freight and Services Nigeria Limited logo",
