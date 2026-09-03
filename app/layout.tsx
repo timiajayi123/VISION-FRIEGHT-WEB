@@ -3,7 +3,7 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { WhatsAppButton } from "@/components/whatsapp-button";
 import { StructuredData } from "@/components/structured-data";
-import { company, sharedOpenGraph, socialPreviewImage } from "@/data/company";
+import { company, sharedOpenGraph, siteIsPublic, socialPreviewImage } from "@/data/company";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -21,20 +21,30 @@ export const metadata: Metadata = {
     url: "/",
   },
   twitter: { card: "summary", title: "Vision Freight and Services Nigeria Limited", description: company.summary, images: [socialPreviewImage.url] },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-      "max-video-preview": -1,
-    },
-  },
+  robots: siteIsPublic
+    ? {
+        index: true,
+        follow: true,
+        googleBot: {
+          index: true,
+          follow: true,
+          "max-image-preview": "large",
+          "max-snippet": -1,
+          "max-video-preview": -1,
+        },
+      }
+    : { index: false, follow: false },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  if (!siteIsPublic) {
+    return (
+      <html lang="en">
+        <body className="min-h-screen bg-white" />
+      </html>
+    );
+  }
+
   return (
     <html lang="en">
       <body>

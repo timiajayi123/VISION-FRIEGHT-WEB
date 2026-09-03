@@ -3,7 +3,7 @@ import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { PageHero } from "@/components/page-hero";
 import { ContactForm } from "@/components/contact-form";
 import { LocationMap } from "@/components/location-map";
-import { company, sharedOpenGraph, socialPreviewImage, whatsappUrl } from "@/data/company";
+import { company, sharedOpenGraph, siteIsPublic, socialPreviewImage, whatsappUrl } from "@/data/company";
 
 const pageTitle = "Contact Vision Freight";
 const pageDescription = "Request a quote or speak with our team about your logistics requirements.";
@@ -17,6 +17,10 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
+  if (!siteIsPublic) {
+    return null;
+  }
+
   return (
     <main id="main-content">
       <PageHero current="Contact" title="Tell us what you need help with" description="Request a quote, call our team or send a WhatsApp message. We’ll review your requirement and guide you on the next step." />

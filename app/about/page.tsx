@@ -3,7 +3,7 @@ import { CheckCircle2, Eye, Handshake, Lightbulb, MessageSquareText, ShieldCheck
 import { PageHero } from "@/components/page-hero";
 import { SectionHeading } from "@/components/section-heading";
 import { CTASection } from "@/components/cta-section";
-import { sharedOpenGraph, socialPreviewImage } from "@/data/company";
+import { sharedOpenGraph, siteIsPublic, socialPreviewImage } from "@/data/company";
 
 const pageTitle = "About Vision Freight";
 const pageDescription = "Our company, purpose, values and commitment to customers.";
@@ -26,6 +26,10 @@ const values = [
 ];
 
 export default function AboutPage() {
+  if (!siteIsPublic) {
+    return null;
+  }
+
   return (
     <main id="main-content">
       <PageHero current="About Us" title="A dependable logistics partner, built around your needs" description="We coordinate freight, clearance, shipping, vehicle leasing and related support with professionalism, practical knowledge and clear communication." />

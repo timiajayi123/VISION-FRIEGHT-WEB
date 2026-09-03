@@ -37,6 +37,9 @@ export const company = {
   socialLinks: {},
 } as const;
 
+// Temporary launch control: set to true when the client is ready for the site to be visible again.
+export const siteIsPublic = false;
+
 export const whatsappUrl = `https://wa.me/${company.whatsapp}?text=${encodeURIComponent(company.whatsappMessage)}`;
 
 export const socialPreviewImage = {

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { PageHero } from "@/components/page-hero";
 import { CTASection } from "@/components/cta-section";
-import { services, sharedOpenGraph, socialPreviewImage } from "@/data/company";
+import { services, sharedOpenGraph, siteIsPublic, socialPreviewImage } from "@/data/company";
 
 const pageTitle = "Vision Freight Services";
 const pageDescription = "Practical support for cargo, trade, mobility and commercial requirements.";
@@ -27,6 +27,10 @@ const serviceBenefits: Record<string, string[]> = {
 };
 
 export default function ServicesPage() {
+  if (!siteIsPublic) {
+    return null;
+  }
+
   return (
     <main id="main-content">
       <PageHero current="Services" title="Practical services for cargo, trade and mobility" description="From documentation and clearance to freight movement, shipping, vehicle leasing and general support, we help clients coordinate what needs to happen next." />

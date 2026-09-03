@@ -5,7 +5,7 @@ import { SectionHeading } from "@/components/section-heading";
 import { ServiceCard } from "@/components/service-card";
 import { CTASection } from "@/components/cta-section";
 import { LocationMap } from "@/components/location-map";
-import { services } from "@/data/company";
+import { services, siteIsPublic } from "@/data/company";
 
 const reasons = [
   { title: "Reliable Service", text: "Careful coordination and dependable follow-through from enquiry to completion.", icon: ShieldCheck },
@@ -26,6 +26,10 @@ const process = [
 const audiences = ["Individuals", "Importers & Exporters", "SMEs", "Corporate Organizations", "Retail Businesses", "Trading Companies"];
 
 export default function HomePage() {
+  if (!siteIsPublic) {
+    return null;
+  }
+
   return (
     <main id="main-content">
       <Hero />
