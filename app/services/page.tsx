@@ -10,20 +10,20 @@ const pageDescription = "Practical support for cargo, trade, mobility and commer
 
 export const metadata: Metadata = {
   title: "Our Services",
-  description: "Explore customs clearance, freight forwarding, import and export, shipping, vehicle leasing, logistics and general services from Vision Freight.",
+  description: "Customs, freight, shipping, leasing and logistics services.",
   alternates: { canonical: "/services" },
   openGraph: { ...sharedOpenGraph, title: pageTitle, description: pageDescription, url: "/services" },
   twitter: { card: "summary", title: pageTitle, description: pageDescription, images: [socialPreviewImage.url] },
 };
 
 const serviceBenefits: Record<string, string[]> = {
-  "customs-clearance": ["Documentation guidance", "Clearance coordination", "Cargo release support"],
-  "freight-forwarding": ["Movement planning", "Shipment coordination", "Import and export support"],
-  "import-export": ["Requirements assessment", "Trade process guidance", "Coordinated support"],
-  shipping: ["Shipping requirement review", "Schedule coordination", "Clear service updates"],
-  "vehicle-leasing": ["Individual and business use", "Corporate mobility support", "Requirement-based options"],
-  "logistics-transportation": ["Goods movement coordination", "Destination planning", "Responsive transport support"],
-  "general-services": ["Requirement assessment", "Commercial support", "Practical next-step guidance"],
+  "customs-clearance": ["Documentation", "Cargo release"],
+  "freight-forwarding": ["Planning", "Shipment coordination"],
+  "import-export": ["Trade guidance", "Coordinated support"],
+  shipping: ["Schedules", "Clear updates"],
+  "vehicle-leasing": ["Personal use", "Business use"],
+  "logistics-transportation": ["Goods movement", "Delivery planning"],
+  "general-services": ["Requirement review", "Commercial support"],
 };
 
 export default function ServicesPage() {
@@ -33,7 +33,7 @@ export default function ServicesPage() {
 
   return (
     <main id="main-content">
-      <PageHero current="Services" title="Practical services for cargo, trade and mobility" description="From documentation and clearance to freight movement, shipping, vehicle leasing and general support, we help clients coordinate what needs to happen next." />
+      <PageHero current="Services" title="Services for cargo, trade and mobility" description="Clear support for what needs to move next." />
       <section className="bg-cream py-20 sm:py-24">
         <div className="site-container space-y-6">
           {services.map((service, index) => {
@@ -48,7 +48,7 @@ export default function ServicesPage() {
                 </div>
                 <div className="pt-6 lg:pt-0">
                   <p className="text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">{service.description}</p>
-                  <ul className="mt-6 grid gap-3 sm:grid-cols-3">{serviceBenefits[service.slug].map((benefit) => <li key={benefit} className="flex items-start gap-2 text-sm font-bold text-navy"><CheckCircle2 aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-orange" />{benefit}</li>)}</ul>
+                  <ul className="mt-6 grid gap-3 sm:grid-cols-2">{serviceBenefits[service.slug].map((benefit) => <li key={benefit} className="flex items-start gap-2 text-sm font-bold text-navy"><CheckCircle2 aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-orange" />{benefit}</li>)}</ul>
                   <Link className="mt-7 inline-flex items-center gap-2 text-sm font-extrabold text-orange transition-colors hover:text-orange-dark focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-orange" href="/contact#quote">Enquire about this service <ArrowRight aria-hidden="true" className="size-4" /></Link>
                 </div>
               </article>

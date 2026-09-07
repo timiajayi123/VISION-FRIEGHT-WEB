@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     default: "Vision Freight and Services Nigeria Limited | Logistics, Freight & Clearance",
     template: "%s | Vision Freight",
   },
-  description: "Vision Freight and Services Nigeria Limited provides customs clearance, freight forwarding, import and export, shipping, logistics and vehicle leasing services in Nigeria.",
+  description: "Freight, customs clearance, shipping, leasing and logistics services in Nigeria.",
   alternates: { canonical: "/" },
   openGraph: {
     ...sharedOpenGraph,

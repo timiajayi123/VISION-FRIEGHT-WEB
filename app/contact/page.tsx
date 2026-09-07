@@ -10,7 +10,7 @@ const pageDescription = "Request a quote or speak with our team about your logis
 
 export const metadata: Metadata = {
   title: "Contact Us",
-  description: "Contact Vision Freight for customs clearance, freight forwarding, shipping, logistics, vehicle leasing and general service enquiries in Lagos, Nigeria.",
+  description: "Contact Vision Freight for freight, clearance, shipping and leasing.",
   alternates: { canonical: "/contact" },
   openGraph: { ...sharedOpenGraph, title: pageTitle, description: pageDescription, url: "/contact" },
   twitter: { card: "summary", title: pageTitle, description: pageDescription, images: [socialPreviewImage.url] },
@@ -23,14 +23,14 @@ export default function ContactPage() {
 
   return (
     <main id="main-content">
-      <PageHero current="Contact" title="Tell us what you need help with" description="Request a quote, call our team or send a WhatsApp message. We’ll review your requirement and guide you on the next step." />
+      <PageHero current="Contact" title="Tell us what you need" description="Call, email or WhatsApp our team." />
 
       <section className="bg-white py-20 sm:py-24">
         <div className="site-container grid gap-10 lg:grid-cols-[.72fr_1.28fr] lg:gap-14">
           <div>
             <p className="eyebrow text-orange">Contact Information</p>
             <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-navy">Speak with our team</h2>
-            <p className="mt-4 leading-7 text-slate-600">Choose the most convenient way to reach us. For urgent enquiries, call or start a WhatsApp conversation.</p>
+            <p className="mt-4 leading-7 text-slate-600">Call or WhatsApp us for urgent enquiries.</p>
             <div className="mt-8 divide-y divide-slate-200 border-y border-slate-200">
               <div className="flex gap-4 py-5"><span className="flex size-10 shrink-0 items-center justify-center rounded-md bg-orange/10 text-orange"><Phone aria-hidden="true" className="size-5" /></span><div><h3 className="font-extrabold text-navy">Phone</h3>{company.phones.map((phone) => <a key={phone} href={`tel:${phone}`} className="mt-1 block text-slate-600 transition-colors hover:text-orange">{phone}</a>)}</div></div>
               <div className="flex gap-4 py-5"><span className="flex size-10 shrink-0 items-center justify-center rounded-md bg-orange/10 text-orange"><Mail aria-hidden="true" className="size-5" /></span><div><h3 className="font-extrabold text-navy">Email</h3><a href={`mailto:${company.email}`} className="mt-1 block break-all text-slate-600 transition-colors hover:text-orange">{company.email}</a></div></div>
@@ -42,7 +42,7 @@ export default function ContactPage() {
           <div id="quote" className="scroll-mt-36 border border-slate-200 bg-cream p-6 shadow-[0_12px_40px_rgb(8_42_74/6%)] sm:p-9">
             <p className="eyebrow text-orange">Request a Quote</p>
             <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-navy">Send an enquiry</h2>
-            <p className="mt-3 mb-7 leading-7 text-slate-600">Complete the form below and provide as much detail as you can about the service required.</p>
+            <p className="mt-3 mb-7 leading-7 text-slate-600">Tell us the service you need.</p>
             <ContactForm />
           </div>
         </div>

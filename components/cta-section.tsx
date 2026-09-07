@@ -9,7 +9,7 @@ export function CTASection() {
         <div>
           <p className="eyebrow text-navy-deep">Ready when you are</p>
           <h2 className="mt-3 max-w-3xl text-balance text-3xl font-extrabold tracking-[-0.035em] text-white sm:text-4xl">Need Logistics, Clearance or Leasing Assistance?</h2>
-          <p className="mt-3 text-lg leading-7 text-white/90">Speak with our team today and let us help you find the right solution.</p>
+          <p className="mt-3 text-lg leading-7 text-white/90">Speak with our team about the right solution.</p>
         </div>
         <div className="flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
           <Link href="/contact#quote" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-sm bg-navy px-5 py-3 text-sm font-extrabold text-white transition-colors hover:bg-navy-deep focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-white">

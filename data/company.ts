@@ -33,12 +33,12 @@ export const company = {
   whatsappMessage:
     "Hello Vision Freight, I would like to make an enquiry about your services.",
   summary:
-    "Dependable freight forwarding, customs clearance, shipping, vehicle leasing and logistics support for businesses and individuals in Nigeria.",
+    "Freight, clearance, shipping, leasing and logistics support in Nigeria.",
   socialLinks: {},
 } as const;
 
-// Temporary launch control: set to true when the client is ready for the site to be visible again.
-export const siteIsPublic = false;
+// Set to false only when the site needs to be temporarily paused.
+export const siteIsPublic = true;
 
 export const whatsappUrl = `https://wa.me/${company.whatsapp}?text=${encodeURIComponent(company.whatsappMessage)}`;
 
@@ -62,63 +62,63 @@ export const services: Service[] = [
     slug: "customs-clearance",
     title: "Customs Clearance",
     shortDescription:
-      "Assistance with customs documentation, processing, clearance and cargo release.",
+      "Customs documentation and cargo clearance support.",
     description:
-      "We help clients understand and manage the documentation and clearance steps required to move cargo through customs efficiently and responsibly.",
+      "Clear guidance through documentation, clearance and cargo release.",
     icon: FileCheck2,
   },
   {
     slug: "freight-forwarding",
     title: "Freight Forwarding",
     shortDescription:
-      "Coordination of cargo movement for efficient import and export operations.",
+      "Cargo movement for import and export.",
     description:
-      "From planning to delivery coordination, we support the smooth movement of cargo across relevant transport channels and checkpoints.",
+      "Coordinated freight planning and delivery support.",
     icon: Container,
   },
   {
     slug: "import-export",
     title: "Import & Export Support",
     shortDescription:
-      "Support for businesses and individuals involved in international trade.",
+      "Practical support for international trade.",
     description:
-      "We provide practical guidance and service coordination for importers and exporters navigating international trade requirements.",
+      "Guidance for import and export requirements.",
     icon: Globe2,
   },
   {
     slug: "shipping",
     title: "Shipping Services",
     shortDescription:
-      "Professional coordination and management of cargo shipping requirements.",
+      "Cargo shipping coordination.",
     description:
-      "Our team coordinates shipping requirements with close attention to documentation, schedules and clear communication throughout the process.",
+      "Documentation, schedules and shipping support.",
     icon: Anchor,
   },
   {
     slug: "vehicle-leasing",
     title: "Vehicle Leasing",
     shortDescription:
-      "Reliable vehicle leasing for individuals, businesses and corporate operations.",
+      "Vehicle leasing for personal and business use.",
     description:
-      "Flexible vehicle leasing support designed around personal, commercial and corporate mobility requirements.",
+      "Flexible options for personal and corporate mobility.",
     icon: CarFront,
   },
   {
     slug: "logistics-transportation",
     title: "Logistics & Transportation",
     shortDescription:
-      "Transportation and movement of goods to required destinations.",
+      "Coordinated goods movement and delivery.",
     description:
-      "We coordinate dependable road movement and delivery arrangements to help goods reach their required destination safely and efficiently.",
+      "Road transport and delivery to your destination.",
     icon: Truck,
   },
   {
     slug: "general-services",
     title: "General Merchant Services",
     shortDescription:
-      "Additional commercial and business support based on client requirements.",
+      "Commercial support for specific requirements.",
     description:
-      "Where a requirement falls outside a standard service category, we assess the need and provide appropriate commercial support or direction.",
+      "Practical support for other commercial needs.",
     icon: PackageCheck,
   },
 ];

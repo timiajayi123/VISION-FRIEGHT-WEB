@@ -14,7 +14,7 @@ export function Hero() {
             Reliable Freight, Logistics &amp; Clearance Solutions
           </h1>
           <p className="mt-6 max-w-xl text-base leading-7 text-slate-200 sm:text-lg sm:leading-8">
-            Vision Freight and Services Nigeria Limited provides dependable freight forwarding, customs clearance, leasing, shipping and general merchant services designed to keep businesses and individuals moving.
+            Freight, clearance, shipping, leasing and logistics support for businesses and individuals.
           </p>
           <div className="mt-8 flex flex-col gap-3 xs:flex-row sm:flex-row">
             <Link className="button-primary" href="/contact#quote">Get a Quote <ArrowRight aria-hidden="true" className="size-4" /></Link>
