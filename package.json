@@ -10,6 +10,7 @@
     "lint": "oxlint ."
   },
   "dependencies": {
+    "appwrite": "^27.0.0",
     "lucide-react": "latest",
     "next": "latest",
     "react": "latest",

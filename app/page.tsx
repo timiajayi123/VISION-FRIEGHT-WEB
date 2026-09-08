@@ -5,6 +5,7 @@ import { SectionHeading } from "@/components/section-heading";
 import { ServiceCard } from "@/components/service-card";
 import { CTASection } from "@/components/cta-section";
 import { LocationMap } from "@/components/location-map";
+import { ClearedGallery } from "@/components/cleared-gallery";
 import { services, siteIsPublic } from "@/data/company";
 
 const reasons = [
@@ -59,6 +60,8 @@ export default function HomePage() {
           </aside>
         </div>
       </section>
+
+      <ClearedGallery />
 
       <section className="bg-cream py-20 sm:py-24">
         <div className="site-container">

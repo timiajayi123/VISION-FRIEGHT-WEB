@@ -11,7 +11,7 @@ const navItems = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
   { label: "Services", href: "/services" },
-  { label: "Why Choose Us", href: "/#why-us" },
+  { label: "Cleared Vehicles", href: "/#cleared-vehicles" },
   { label: "Contact", href: "/contact" },
 ];
 

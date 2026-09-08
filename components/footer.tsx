@@ -7,7 +7,7 @@ const footerNav = [
   ["Home", "/"],
   ["About Us", "/about"],
   ["Services", "/services"],
-  ["Why Choose Us", "/#why-us"],
+  ["Cleared Vehicles", "/#cleared-vehicles"],
   ["Contact", "/contact"],
 ] as const;
 
