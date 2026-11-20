@@ -1,7 +1,7 @@
 "use client";
 
 import { type FormEvent, useCallback, useEffect, useRef, useState } from "react";
-import { ID, Permission, Query, Role, type Models } from "appwrite";
+import { ID, Permission, Role, type Models } from "appwrite";
 import { CheckCircle2, CloudUpload, LoaderCircle, LogIn, LogOut, Trash2 } from "lucide-react";
 import { ClearedMediaCard } from "@/components/cleared-gallery";
 import {
@@ -9,6 +9,7 @@ import {
   ADMIN_EMAIL,
   ADMIN_USER_ID,
   CLEARED_MEDIA_BUCKET_ID,
+  listClearedMediaFiles,
   storage,
 } from "@/lib/appwrite";
 
@@ -32,8 +33,7 @@ export function AdminPanel() {
   const [error, setError] = useState("");
 
   const loadFiles = useCallback(async () => {
-    const result = await storage.listFiles({ bucketId: CLEARED_MEDIA_BUCKET_ID, queries: [Query.limit(60)] });
-    setFiles([...result.files].sort((a, b) => b.$createdAt.localeCompare(a.$createdAt)));
+    setFiles(await listClearedMediaFiles());
   }, []);
 
   useEffect(() => {

@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Query, type Models } from "appwrite";
+import { type Models } from "appwrite";
 import { ImageIcon, Play } from "lucide-react";
-import { CLEARED_MEDIA_BUCKET_ID, storage } from "@/lib/appwrite";
+import { CLEARED_MEDIA_BUCKET_ID, listClearedMediaFiles, storage } from "@/lib/appwrite";
 import { SectionHeading } from "@/components/section-heading";
 
 function mediaUrl(fileId: string) {
@@ -43,11 +43,10 @@ export function ClearedGallery() {
   useEffect(() => {
     let active = true;
 
-    storage
-      .listFiles({ bucketId: CLEARED_MEDIA_BUCKET_ID, queries: [Query.limit(60)] })
+    listClearedMediaFiles()
       .then((result) => {
         if (active) {
-          setFiles([...result.files].sort((a, b) => b.$createdAt.localeCompare(a.$createdAt)));
+          setFiles(result);
         }
       })
       .catch(() => {
